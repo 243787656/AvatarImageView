@@ -44,11 +44,6 @@ public class AvatarImageView  extends ImageView {
     }
     public AvatarImageView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        buildDrawingCache();
-        if(getDrawingCache()!=null){
-            mBitmap = Bitmap.createBitmap(getDrawingCache());
-            setBitmaps();
-        }
     }
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
@@ -106,6 +101,9 @@ public class AvatarImageView  extends ImageView {
         setBitmaps();
     }
 
+    /**
+     * 会调用这个方法设置前景 src
+     */
     @Override
     public void setImageDrawable(Drawable drawable) {
         super.setImageDrawable(drawable);
@@ -133,7 +131,6 @@ public class AvatarImageView  extends ImageView {
             backgroundBitmap = getBitmapFromDrawable(getBackground());
             invalidate();
         }
-
     }
     /**
      * Drawable转Bitmap
