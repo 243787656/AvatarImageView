@@ -11,21 +11,21 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-    <cn.fanrunqi.avatarimageview.AvatarImageView
+    <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
         android:layout_marginLeft="20dp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/rectangle_shape_three"
         android:src="@drawable/a" />
 
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/rectangle_shape"
             android:src="@drawable/d"
             />
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -38,21 +38,21 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/rectangle_shape_two"
             android:src="@drawable/b" />
 
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/bg_a"
             android:src="@drawable/e"
             />
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -65,21 +65,21 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/bg_c"
             android:src="@drawable/a" />
 
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/bg_d"
             android:src="@drawable/c"
             />
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"
@@ -93,7 +93,7 @@
         android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <cn.fanrunqi.avatarimageview.AvatarImageView
+        <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_marginLeft="20dp"
             android:layout_width="100dp"
             android:layout_height="100dp"

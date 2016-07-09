@@ -1,4 +1,4 @@
-package cn.fanrunqi.avatarimageview;
+package cn.fanrunqi.avatarimageviewlibrary;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -15,27 +15,17 @@ import android.widget.ImageView;
 /**
  * Created by fanrunqi on 2016/7/1.
  */
-public class AvatarImageView  extends ImageView {
-    /**
-     * 用于图片背景
-     */
+public class AvatarImageView extends ImageView {
+
     private Bitmap backgroundBitmap;
-    /**
-     * 显示的图片
-     */
+
     private Bitmap mBitmap;
-    /**
-     * view 的宽度
-     */
+
     private int viewWidth;
-    /**
-     * view 的高度
-     */
+
     private int viewHeight;
 
-    /**
-     * 构造函数
-     */
+
     public AvatarImageView(Context context) {
         this(context,null,0);
     }
@@ -48,10 +38,7 @@ public class AvatarImageView  extends ImageView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec,heightMeasureSpec);
-        /**
-         * 获得控件的宽高，默认MeasureSpec.EXACTLY （ match_parent , accurate ）
-         * 并且布局文件中应该设置 控件的宽高相等
-         */
+
         viewWidth = MeasureSpec.getSize(widthMeasureSpec);
         viewHeight = MeasureSpec.getSize(heightMeasureSpec);
     }
@@ -59,15 +46,11 @@ public class AvatarImageView  extends ImageView {
     @Override
     protected void onDraw(Canvas canvas) {
         if(mBitmap!=null && backgroundBitmap!=null){
-            /**
-             * 对图片给进行缩放
-             */
+
             int min = Math.min(viewWidth, viewHeight);
             backgroundBitmap = Bitmap.createScaledBitmap(backgroundBitmap, min, min, false);
             mBitmap = Bitmap.createScaledBitmap(mBitmap, min, min, false);
-            /**
-             * 把最后的bitmap画上去
-             */
+
             canvas.drawBitmap(createImage(), 0, 0, null);
         }
     }
@@ -76,21 +59,13 @@ public class AvatarImageView  extends ImageView {
         Paint paint = new Paint();
         paint.setAntiAlias(true);
         Bitmap finalBmp = Bitmap.createBitmap(viewWidth,viewHeight, Bitmap.Config.ARGB_8888);
-        /**
-         * 产生一个同样大小的画布
-         */
+
         Canvas canvas = new Canvas(finalBmp);
-        /**
-         * 首先背景图片
-         */
+
         canvas.drawBitmap(backgroundBitmap, 0, 0, paint);
-        /**
-         * 使用SRC_IN，取两层绘制交集，显示上层。
-         */
+
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-        /**
-         * 绘制前景图片
-         */
+
         canvas.drawBitmap(mBitmap, 0, 0, paint);
         return finalBmp;
     }
@@ -101,9 +76,6 @@ public class AvatarImageView  extends ImageView {
         setBitmaps();
     }
 
-    /**
-     * 会调用这个方法设置前景 src
-     */
     @Override
     public void setImageDrawable(Drawable drawable) {
         super.setImageDrawable(drawable);
@@ -132,9 +104,7 @@ public class AvatarImageView  extends ImageView {
             invalidate();
         }
     }
-    /**
-     * Drawable转Bitmap
-     */
+
     private Bitmap getBitmapFromDrawable(Drawable drawable) {
         super.setScaleType(ScaleType.CENTER_CROP);
         if (drawable == null) {
