@@ -11,7 +11,19 @@ The effect：
 
 ## Step 1
 
-> Copy [AvatarImageView.java](https://github.com/fanrunqi/AvatarImageView/blob/master/app/src/main/java/cn/fanrunqi/avatarimageview/AvatarImageView.java) to your project.
+> Gradle
+```
+compile 'cn.fanrunqi:avatarimageviewlibrary:1.0.0'
+```
+> Maven 
+```
+<dependency>
+  <groupId>cn.fanrunqi</groupId>
+  <artifactId>avatarimageviewlibrary</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
 
 
 ## Step 2
@@ -19,7 +31,7 @@ The effect：
 > use like this.
 
 ```
-<cn.fanrunqi.avatarimageview.AvatarImageView
+<cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:background="@drawable/oval_shape"
