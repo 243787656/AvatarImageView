@@ -9,7 +9,7 @@ The effect：
 
 # Usage
 
-## Step 1
+## dependency
 
 > Gradle
 ```
@@ -25,10 +25,7 @@ compile 'cn.fanrunqi:avatarimageviewlibrary:1.0.0'
 </dependency>
 ```
 
-
-## Step 2
-
-> use like this.
+## layout
 
 ```
 <cn.fanrunqi.avatarimageviewlibrary.AvatarImageView
